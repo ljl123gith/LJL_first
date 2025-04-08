@@ -1,4 +1,4 @@
-![图片26](https://github.com/user-attachments/assets/656b2dd9-435d-4746-8713-e2ff0badb846)这是一个基于LQR求解器的ZMP步态算法规划代码，其中包含不同的开发方式。
+这是一个基于LQR求解器的ZMP步态算法规划代码，其中包含不同的开发方式。
 1.文件夹control里包含了controlCore和其他文件夹。
 1.1运行行走的demo只需要首先在MATLAB中运行 biped_robot_contr_Core.mlx ，该实时编辑脚本将是步态行走的核心代码，运行后将会生成步态离线数据。
 1.2.其次你需要打开control目录下的 Mini_HR100_V5.slx  ，开始运行仿真即可。
@@ -108,4 +108,5 @@ MiniHR100_简要说明文档
 ![图片26](https://github.com/user-attachments/assets/5a598688-3428-4fd9-b3c0-0cdb0c5256c9)
 ![图片27](https://github.com/user-attachments/assets/706e6c5b-2272-4096-acc4-8ae6cfeeced6)
 
-
+3.基于embedcode 的代码生成在文件夹MBD_C 中
+4.基于RL的 控制方式
