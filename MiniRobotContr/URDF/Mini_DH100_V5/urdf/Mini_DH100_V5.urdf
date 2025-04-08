@@ -1,0 +1,1946 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<robot
+  name="Mini_DH100_V5">
+
+  <link name="base_footprint">
+        <visual>
+            <geometry>
+                <sphere radius="0.001" />
+            </geometry>
+        </visual>
+    </link>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0037566349113308 0.00305579382722649 0.0119407221269036"
+        rpy="0 0 0" />
+      <mass
+        value="0.950162334172415" />
+      <inertia
+        ixx="0.000683662298929604"
+        ixy="-1.6088442145095E-07"
+        ixz="-9.36136834769718E-08"
+        iyy="0.000790591695640072"
+        iyz="-7.47967383256517E-06"
+        izz="0.000811258845400107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+ <joint name="base_link2base_footprint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link"/>
+        <origin xyz="0 0 0.055" />
+    </joint>
+
+  <link
+    name="base_link1">
+    <inertial>
+      <origin
+        xyz="0.00051856 0.014437 0.027387"
+        rpy="0 0 0" />
+      <mass
+        value="0.086437" />
+      <inertia
+        ixx="2.1659E-05"
+        ixy="2.9507E-20"
+        ixz="3.1578E-20"
+        iyy="3.7967E-05"
+        iyz="1.0867E-20"
+        izz="2.5506E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/base_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/base_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_1"
+    type="revolute">
+    <origin
+      xyz="-0.0043186 -0.027049 0.10865"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+
+  <link
+    name="base_link2">
+    <inertial>
+      <origin
+        xyz="-0.0202921843297092 0.0559862119085731 0.0252876685571898"
+        rpy="0 0 0" />
+      <mass
+        value="2.09676207614636" />
+      <inertia
+        ixx="0.00291303188284914"
+        ixy="-0.000125442891092828"
+        ixz="-3.88649459128354E-07"
+        iyy="0.00226805602700557"
+        iyz="8.76402203445825E-07"
+        izz="0.00174815005399474" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/base_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/base_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_2"
+    type="revolute">
+    <origin
+      xyz="0.00051856 0 0.0541"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="base_link1" />
+    <child
+      link="base_link2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm1">
+    <inertial>
+      <origin
+        xyz="-0.0145108926731046 0.00995457512607585 -0.00356647562579419"
+        rpy="0 0 0" />
+      <mass
+        value="0.256680250326883" />
+      <inertia
+        ixx="7.67782733468637E-05"
+        ixy="5.49968163063345E-07"
+        ixz="-1.83138626160947E-06"
+        iyy="0.000166384518568915"
+        iyz="5.58680374323758E-07"
+        izz="0.000183440423556101" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_1"
+    type="revolute">
+    <origin
+      xyz="0.005 0.096001 -0.083068"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link2" />
+    <child
+      link="left_arm1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm2">
+    <inertial>
+      <origin
+        xyz="0.0204516041501904 0.0453038815905125 0.00679606276748285"
+        rpy="0 0 0" />
+      <mass
+        value="0.234432134426978" />
+      <inertia
+        ixx="0.000172861490275234"
+        ixy="-5.60332885373464E-06"
+        ixz="-9.25264369602782E-07"
+        iyy="0.000156835359546301"
+        iyz="-5.01715032007408E-06"
+        izz="0.000113315114486231" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_2"
+    type="revolute">
+    <origin
+      xyz="0.002 0.01215 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="left_arm1" />
+    <child
+      link="left_arm2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm3">
+    <inertial>
+      <origin
+        xyz="5.89262470814672E-07 -4.58171755279707E-05 -0.0231498459032027"
+        rpy="0 0 0" />
+      <mass
+        value="0.0318114493488224" />
+      <inertia
+        ixx="2.57149387368985E-05"
+        ixy="-5.10934516816444E-15"
+        ixz="-5.9459982691071E-16"
+        iyy="1.58413777721461E-05"
+        iyz="3.37308456346306E-08"
+        izz="2.24662166096221E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_3"
+    type="revolute">
+    <origin
+      xyz="0.025 0.1157 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="left_arm2" />
+    <child
+      link="left_arm3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm4">
+    <inertial>
+      <origin
+        xyz="0.027662 0.0051716 0.0001823"
+        rpy="0 0 0" />
+      <mass
+        value="0.36239" />
+      <inertia
+        ixx="8.9769E-05"
+        ixy="1.1131E-07"
+        ixz="-1.4993E-06"
+        iyy="0.00012356"
+        iyz="4.2845E-07"
+        izz="0.00011598" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_4"
+    type="revolute">
+    <origin
+      xyz="0 0.00155 0"
+      rpy="0 -1.5339 1.5708" />
+    <parent
+      link="left_arm3" />
+    <child
+      link="left_arm4" />
+    <axis
+      xyz="0.036846 0 -0.99932" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm5">
+    <inertial>
+      <origin
+        xyz="0.0385443189932995 0.00294955353042317 6.90372060879185E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.382052819857025" />
+      <inertia
+        ixx="0.000267068740201889"
+        ixy="1.80444448150036E-05"
+        ixz="2.93195756561568E-07"
+        iyy="0.000366620089592131"
+        iyz="-8.67481741975523E-08"
+        izz="0.000297073626118094" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_5"
+    type="revolute">
+    <origin
+      xyz="0.058959 0.007175 0.0021739"
+      rpy="1.5708 0 0" />
+    <parent
+      link="left_arm4" />
+    <child
+      link="left_arm5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm6">
+    <inertial>
+      <origin
+        xyz="-0.000178432682717628 0.00153959602693506 -0.0281756723006273"
+        rpy="0 0 0" />
+      <mass
+        value="0.314931574354424" />
+      <inertia
+        ixx="0.000180459640972569"
+        ixy="-1.1601214015492E-07"
+        ixz="6.49782873421309E-08"
+        iyy="0.000182629421599818"
+        iyz="-3.37611570468606E-06"
+        izz="0.000251629174745294" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/left_arm6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_6"
+    type="revolute">
+    <origin
+      xyz="0.1257 0 0"
+      rpy="0.036854 1.5708 0" />
+    <parent
+      link="left_arm5" />
+    <child
+      link="left_arm6" />
+    <axis
+      xyz="0 0.036846 -0.99932" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm1">
+    <inertial>
+      <origin
+        xyz="-0.0145108926731045 -0.00995457512607598 0.00356647562579485"
+        rpy="0 0 0" />
+      <mass
+        value="0.256680250326883" />
+      <inertia
+        ixx="7.67782733468638E-05"
+        ixy="-5.49968163063332E-07"
+        ixz="1.83138626160956E-06"
+        iyy="0.000166384518568914"
+        iyz="5.58680374323775E-07"
+        izz="0.0001834404235561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_1"
+    type="revolute">
+    <origin
+      xyz="0.0044814 0.095801 0.13717"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link2" />
+    <child
+      link="right_arm1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm2">
+    <inertial>
+      <origin
+        xyz="0.0204516041822147 -0.0453038815663056 -0.0067960489329025"
+        rpy="0 0 0" />
+      <mass
+        value="0.234432136226667" />
+      <inertia
+        ixx="0.000172861490774839"
+        ixy="5.60332884825568E-06"
+        ixz="9.25264403140275E-07"
+        iyy="0.00015683535997795"
+        iyz="-5.01715015861735E-06"
+        izz="0.000113315114528936" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_2"
+    type="revolute">
+    <origin
+      xyz="0.002 -0.00515 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="right_arm1" />
+    <child
+      link="right_arm2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm3">
+    <inertial>
+      <origin
+        xyz="-4.5102810375397E-17 4.8797685509111E-05 0.0154157807053487"
+        rpy="0 0 0" />
+      <mass
+        value="0.03013325786654" />
+      <inertia
+        ixx="1.64932470713419E-05"
+        ixy="3.01632163593747E-22"
+        ixz="2.91381706368755E-21"
+        iyy="1.20849147150368E-05"
+        iyz="2.26678763810721E-08"
+        izz="2.26256398425163E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_3"
+    type="revolute">
+    <origin
+      xyz="0.025001 -0.1007 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="right_arm2" />
+    <child
+      link="right_arm3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm4">
+    <inertial>
+      <origin
+        xyz="-0.00517158975395978 -0.0276502547500544 0.000837072158673513"
+        rpy="0 0 0" />
+      <mass
+        value="0.362387216657035" />
+      <inertia
+        ixx="0.000123564288094316"
+        ixy="1.27025115221397E-07"
+        ixz="4.24059344255181E-07"
+        iyy="8.96942846355634E-05"
+        iyz="-5.30004378822909E-07"
+        izz="0.000116057030625158" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_4"
+    type="revolute">
+    <origin
+      xyz="0 -0.0018 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="right_arm3" />
+    <child
+      link="right_arm4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm5">
+    <inertial>
+      <origin
+        xyz="0.0384094525519024 0.00436775738425832 6.9037242691368E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.382052831022781" />
+      <inertia
+        ixx="0.000265875063309624"
+        ixy="1.43298629856838E-05"
+        ixz="2.96193043926954E-07"
+        iyy="0.000367813767121574"
+        iyz="-7.58861736920596E-08"
+        izz="0.000297073626275368" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_5"
+    type="revolute">
+    <origin
+      xyz="-0.003175 -0.058999 0"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="right_arm4" />
+    <child
+      link="right_arm5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm6">
+    <inertial>
+      <origin
+        xyz="-0.000870198701569336 -0.000668216492749535 -0.0276740120514716"
+        rpy="0 0 0" />
+      <mass
+        value="0.314931572973507" />
+      <inertia
+        ixx="0.000182954247215664"
+        ixy="-1.47592957417282E-06"
+        ixz="1.67526141579892E-06"
+        iyy="0.000181421866178941"
+        iyz="1.55344344274994E-06"
+        izz="0.000250342116270456" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/right_arm6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_6"
+    type="revolute">
+    <origin
+      xyz="0.12561 0.0046316 0"
+      rpy="0 1.5708 0" />
+    <parent
+      link="right_arm5" />
+    <child
+      link="right_arm6" />
+    <axis
+      xyz="0 -0.036846 -0.99932" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="head_link1">
+    <inertial>
+      <origin
+        xyz="-1.89843800402212E-16 -4.87976855092368E-05 0.0132342192946518"
+        rpy="0 0 0" />
+      <mass
+        value="0.03013325786654" />
+      <inertia
+        ixx="1.64932470713419E-05"
+        ixy="-1.38701645112892E-20"
+        ixz="-4.50783209341419E-21"
+        iyy="1.20849147150368E-05"
+        iyz="2.26678763811159E-08"
+        izz="2.26256398425163E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/head_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/head_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_link_1"
+    type="revolute">
+    <origin
+      xyz="0.004 0.136 0.027049"
+      rpy="-1.5708 0.052684 0" />
+    <parent
+      link="base_link2" />
+    <child
+      link="head_link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="head_link2">
+    <inertial>
+      <origin
+        xyz="0.0139580046482272 0.0719958924355778 0.0033731234434365"
+        rpy="0 0 0" />
+      <mass
+        value="1.12496500664929" />
+      <inertia
+        ixx="0.00147385714722389"
+        ixy="-1.51402625580936E-05"
+        ixz="2.38016190558504E-07"
+        iyy="0.00102862700145275"
+        iyz="-1.57572076555264E-06"
+        izz="0.000868972080584169" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/head_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DH100_V5/meshes/head_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_link_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.02865"
+      rpy="1.5708 0 0" />
+    <parent
+      link="head_link1" />
+    <child
+      link="head_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+
+
+	<link
+	  name="left_hip1">
+		<inertial>
+			<origin
+			  xyz="6.3658E-05 -0.018626 0.0020748"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.090419" />
+			<inertia
+			  ixx="5.3825E-05"
+			  ixy="-7.7297E-08"
+			  ixz="1.6702E-07"
+			  iyy="5.2483E-05"
+			  iyz="-1.8234E-07"
+			  izz="7.6761E-05" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_hip1.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.89804 0.91765 0.92941 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_hip1.STL" />
+			</geometry>
+		</collision>
+	</link>
+
+	<joint
+	  name="left_hip_pitch"
+	  type="revolute">
+		<origin
+		  xyz="-0.001085 0.0939 -0.013327"
+		  rpy="0 0 0" />
+		<parent
+		  link="base_link" />
+		<child
+		  link="left_hip1" />
+		<axis
+		  xyz="0 1 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="1" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+
+	<link
+	  name="left_hip2">
+		<inertial>
+			<origin
+			  xyz="-0.0032835 -0.0078728 -0.0015272"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.16419" />
+			<inertia
+			  ixx="5.2156E-05"
+			  ixy="-1.1904E-08"
+			  ixz="-1.3136E-07"
+			  iyy="2.6121E-05"
+			  iyz="2.2088E-08"
+			  izz="5.8672E-05" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_hip2.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.89804 0.91765 0.92941 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_hip2.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="left_hip_roll"
+	  type="revolute">
+		<origin
+		  xyz="0.0018224 0.0055 -0.024"
+		  rpy="0 0 0" />
+		<parent
+		  link="left_hip1" />
+		<child
+		  link="left_hip2" />
+		<axis
+		  xyz="-1 0 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="left_hip3">
+		<inertial>
+			<origin
+			  xyz="-0.0009528 0.0042278 -0.07102"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.47373" />
+			<inertia
+			  ixx="0.00048195"
+			  ixy="-3.8127E-06"
+			  ixz="1.2787E-05"
+			  iyy="0.00038829"
+			  iyz="-1.4208E-05"
+			  izz="0.00018127" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_hip3.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.89804 0.91765 0.92941 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_hip3.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="left_hip_yaw"
+	  type="revolute">
+		<origin
+		  xyz="0 -0.00525 -0.02315"
+		  rpy="0 0 0" />
+		<parent
+		  link="left_hip2" />
+		<child
+		  link="left_hip3" />
+		<axis
+		  xyz="0 0 -1" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="left_knee">
+		<inertial>
+			<origin
+			  xyz="0.0069938 0.0033833 -0.060338"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.37345" />
+			<inertia
+			  ixx="0.00042916"
+			  ixy="1.603E-06"
+			  ixz="1.6288E-05"
+			  iyy="0.00032215"
+			  iyz="-4.5821E-06"
+			  izz="0.00015892" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_knee.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.89804 0.91765 0.92941 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_knee.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="left_knee_jo"
+	  type="revolute">
+		<origin
+		  xyz="-0.0045 -0.00025 -0.128"
+		  rpy="0 0 0" />
+		<parent
+		  link="left_hip3" />
+		<child
+		  link="left_knee" />
+		<axis
+		  xyz="0 1 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="left_foot_y">
+		<inertial>
+			<origin
+			  xyz="-0.012888 0.0010006 -0.027217"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.20417" />
+			<inertia
+			  ixx="8.6232E-05"
+			  ixy="-1.0733E-09"
+			  ixz="-1.792E-07"
+			  iyy="5.192E-05"
+			  iyz="-6.0737E-10"
+			  izz="5.7586E-05" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_foot_y.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.89804 0.91765 0.92941 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_foot_y.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="left_foot_y_jo"
+	  type="revolute">
+		<origin
+		  xyz="0.008 0 -0.118"
+		  rpy="0 0 0" />
+		<parent
+		  link="left_knee" />
+		<child
+		  link="left_foot_y" />
+		<axis
+		  xyz="0 -1 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="left_foot_x">
+		<inertial>
+			<origin
+			  xyz="-0.00424471215086678 8.83615687563566E-08 -0.0258874402362225"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.179769751979251" />
+			<inertia
+			  ixx="0.000162575615631408"
+			  ixy="-4.3502822144027E-10"
+			  ixz="-1.39480656464972E-08"
+			  iyy="0.000294918316791951"
+			  iyz="1.98565170719036E-10"
+			  izz="0.000424048295428821" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_foot_x.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/left_foot_x.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="left_foot_x_jo"
+	  type="revolute">
+		<origin
+		  xyz="0 0.00099941 -0.037"
+		  rpy="0 0 0" />
+		<parent
+		  link="left_foot_y" />
+		<child
+		  link="left_foot_x" />
+		<axis
+		  xyz="1 0 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="right_hip1">
+		<inertial>
+			<origin
+			  xyz="-6.36577274108069E-05 0.0196260014767908 0.00207479626074852"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.0904187381715403" />
+			<inertia
+			  ixx="5.38246679078187E-05"
+			  ixy="-7.72969434280209E-08"
+			  ixz="-1.67022310989973E-07"
+			  iyy="5.24826042522271E-05"
+			  iyz="1.82341790079396E-07"
+			  izz="7.67608010482985E-05" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_hip1.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_hip1.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="right_hip_pitch"
+	  type="revolute">
+		<origin
+		  xyz="0.001115 -0.0965 -0.013327"
+		  rpy="0 0 0" />
+		<parent
+		  link="base_link" />
+		<child
+		  link="right_hip1" />
+		<axis
+		  xyz="0 1 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="right_hip2">
+		<inertial>
+			<origin
+			  xyz="0.00331113643961317 0.00787277973418271 -0.00152715629104833"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.164190861193546" />
+			<inertia
+			  ixx="5.215641323237E-05"
+			  ixy="-1.19039463273149E-08"
+			  ixz="1.31358874032874E-07"
+			  iyy="2.61205317951127E-05"
+			  iyz="-2.208848562922E-08"
+			  izz="5.86715753089718E-05" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_hip2.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_hip2.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="right_hip_roll"
+	  type="revolute">
+		<origin
+		  xyz="-0.00185 -0.0045 -0.024"
+		  rpy="0 0 0" />
+		<parent
+		  link="right_hip1" />
+		<child
+		  link="right_hip2" />
+		<axis
+		  xyz="1 0 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="right_hip3">
+		<inertial>
+			<origin
+			  xyz="-0.000952797397745661 0.00422775394663047 -0.0710200720744198"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.47372999581153" />
+			<inertia
+			  ixx="0.000481949796096193"
+			  ixy="-3.81271886359838E-06"
+			  ixz="1.278669641739E-05"
+			  iyy="0.000388294415269902"
+			  iyz="-1.42075949096599E-05"
+			  izz="0.000181274621011488" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_hip3.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_hip3.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="right_hip_yaw"
+	  type="revolute">
+		<origin
+		  xyz="-2.7594E-05 0.00475 -0.02315"
+		  rpy="0 0 0" />
+		<parent
+		  link="right_hip2" />
+		<child
+		  link="right_hip3" />
+		<axis
+		  xyz="0 0 -1" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="right_knee">
+		<inertial>
+			<origin
+			  xyz="0.00699381071780936 0.00338332520135909 -0.0603381196837382"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.373447646908613" />
+			<inertia
+			  ixx="0.000429162766551639"
+			  ixy="1.60301527579783E-06"
+			  ixz="1.62879548340809E-05"
+			  iyy="0.000322151019554768"
+			  iyz="-4.58205901445265E-06"
+			  izz="0.000158922625277449" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_knee.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_knee.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="right_knee_jo"
+	  type="revolute">
+		<origin
+		  xyz="-0.0045 -0.00025 -0.128"
+		  rpy="0 0 0" />
+		<parent
+		  link="right_hip3" />
+		<child
+		  link="right_knee" />
+		<axis
+		  xyz="0 -1 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="right_foot_y">
+		<inertial>
+			<origin
+			  xyz="-0.012888387546339 0.00100062353508162 -0.027216990307178"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.204168570722069" />
+			<inertia
+			  ixx="8.62320348105702E-05"
+			  ixy="-1.07327974268827E-09"
+			  ixz="-1.79197419171308E-07"
+			  iyy="5.19196934874567E-05"
+			  iyz="-6.07410466001495E-10"
+			  izz="5.75861568294968E-05" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_foot_y.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_foot_y.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="right_foot_y_jo"
+	  type="revolute">
+		<origin
+		  xyz="0.008 0 -0.118"
+		  rpy="0 0 0" />
+		<parent
+		  link="right_knee" />
+		<child
+		  link="right_foot_y" />
+		<axis
+		  xyz="0 -1 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+	<link
+	  name="right_foot_x">
+		<inertial>
+			<origin
+			  xyz="-0.00424471215086948 8.83615729752041E-08 -0.0258874402362225"
+			  rpy="0 0 0" />
+			<mass
+			  value="0.179769751979255" />
+			<inertia
+			  ixx="0.000162575615631412"
+			  ixy="-4.35028220172925E-10"
+			  ixz="-1.39480656458583E-08"
+			  iyy="0.000294918316791956"
+			  iyz="1.98565170082592E-10"
+			  izz="0.000424048295428829" />
+		</inertial>
+		<visual>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_foot_x.STL" />
+			</geometry>
+			<material
+			  name="">
+				<color
+				  rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin
+			  xyz="0 0 0"
+			  rpy="0 0 0" />
+			<geometry>
+				<mesh
+				  filename="package://Mini_DH100_V5/meshes/right_foot_x.STL" />
+			</geometry>
+		</collision>
+	</link>
+	<joint
+	  name="right_foot_x_jo"
+	  type="revolute">
+		<origin
+		  xyz="0 0.001 -0.037"
+		  rpy="0 0 0" />
+		<parent
+		  link="right_foot_y" />
+		<child
+		  link="right_foot_x" />
+		<axis
+		  xyz="-1 0 0" />
+		<limit
+		  lower="-3"
+		  upper="3"
+		  effort="100"
+		  velocity="3" />
+		<calibration
+		  rising="1"
+		  falling="1" />
+		<dynamics
+		  damping="1"
+		  friction="1" />
+	</joint>
+
+
+
+
+
+
+</robot>

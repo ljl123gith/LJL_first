@@ -1,0 +1,1307 @@
+ <?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Mini_DR100_V3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0037566 0.0030558 0.011941"
+        rpy="0 0 0" />
+      <mass
+        value="0.95016" />
+      <inertia
+        ixx="0.00068366"
+        ixy="-1.6088E-07"
+        ixz="-9.3614E-08"
+        iyy="0.00079059"
+        iyz="-7.4797E-06"
+        izz="0.00081126" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+	
+  <link
+    name="base_link2">
+    <inertial>
+      <origin
+        xyz="-0.010604 0.00023246 0.019884"
+        rpy="0 0 0" />
+      <mass
+        value="3.3383" />
+      <inertia
+        ixx="0.0044234"
+        ixy="3.2155E-05"
+        ixz="-0.00014065"
+        iyy="0.0026564"
+        iyz="1.0989E-07"
+        izz="0.0033573" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/base_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/base_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_2"
+    type="revolute">
+    <origin
+      xyz="0.00020003 0 0.20465"
+      rpy="0.00026738 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_link2" />
+    <axis
+      xyz="0 0.00026738 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm">
+    <inertial>
+      <origin
+        xyz="-0.0145108926731045 -0.00356647562577495 -0.00995457512607593"
+        rpy="0 0 0" />
+      <mass
+        value="0.256680250326883" />
+      <inertia
+        ixx="7.67782733468637E-05"
+        ixy="-1.83138626160975E-06"
+        ixz="-5.49968163063364E-07"
+        iyy="0.000183440423556101"
+        iyz="-5.58680374323752E-07"
+        izz="0.000166384518568915" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/left_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/left_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm1"
+    type="revolute">
+    <origin
+      xyz="0.001 0.11012 -2.9443E-05"
+      rpy="-0.00026738 0 0" />
+    <parent
+      link="base_link2" />
+    <child
+      link="left_arm" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm2">
+    <inertial>
+      <origin
+        xyz="0.0209951282703796 0.0509489844074316 -0.00616047346034046"
+        rpy="0 0 0" />
+      <mass
+        value="0.2662435837758" />
+      <inertia
+        ixx="0.000198576429012132"
+        ixy="-5.60332885373468E-06"
+        ixz="-9.25264369602788E-07"
+        iyy="0.000179301576155924"
+        iyz="-5.05088116570888E-06"
+        izz="0.000129156492258377" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/left_arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/left_arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_2"
+    type="revolute">
+    <origin
+      xyz="0.002 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm" />
+    <child
+      link="left_arm2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm3">
+    <inertial>
+      <origin
+        xyz="-0.00854995905622837 0.0915268381380364 -0.0151539780838335"
+        rpy="0 0 0" />
+      <mass
+        value="1.05937161343731" />
+      <inertia
+        ixx="0.000601097555378388"
+        ixy="9.4254227370681E-08"
+        ixz="-4.06377472043896E-07"
+        iyy="0.000610170162857012"
+        iyz="1.82233078158185E-05"
+        izz="0.000663528579458327" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/left_arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/left_arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_3"
+    type="revolute">
+    <origin
+      xyz="0.027139 0.11522 0"
+      rpy="0.0087266 0 0" />
+    <parent
+      link="left_arm2" />
+    <child
+      link="left_arm3" />
+    <axis
+      xyz="0 0.0087265 0.99996" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm">
+    <inertial>
+      <origin
+        xyz="-0.0145108926731045 0.00356647562579444 0.00995457512607606"
+        rpy="0 0 0" />
+      <mass
+        value="0.256680250326883" />
+      <inertia
+        ixx="7.67782733468638E-05"
+        ixy="1.83138626160956E-06"
+        ixz="5.49968163063339E-07"
+        iyy="0.000183440423556101"
+        iyz="-5.58680374323706E-07"
+        izz="0.000166384518568914" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/right_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/right_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm1"
+    type="revolute">
+    <origin
+      xyz="0.00048144 -0.11012 -0.00017056"
+      rpy="-0.00026738 0 0" />
+    <parent
+      link="base_link2" />
+    <child
+      link="right_arm" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm2">
+    <inertial>
+      <origin
+        xyz="0.0209697208507087 -0.0498575301282746 -0.000877569893028063"
+        rpy="0 0 0" />
+      <mass
+        value="0.264565394093207" />
+      <inertia
+        ixx="0.000189354737846181"
+        ixy="5.60332884825566E-06"
+        ixz="9.25264403140295E-07"
+        iyy="0.000179460999820466"
+        iyz="-5.03981803499828E-06"
+        izz="0.000125400029243972" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/right_arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/right_arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_2"
+    type="revolute">
+    <origin
+      xyz="0.002 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm" />
+    <child
+      link="right_arm2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm3">
+    <inertial>
+      <origin
+        xyz="-0.00206932459707209 -0.0907011930322285 0.010085708796682"
+        rpy="0 0 0" />
+      <mass
+        value="1.05937162281971" />
+      <inertia
+        ixx="0.000601097571097074"
+        ixy="3.49778577176264E-07"
+        ixz="3.88838756331556E-07"
+        iyy="0.000606620600371422"
+        iyz="-1.61247787333055E-05"
+        izz="0.000667078126115127" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/right_arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V3/meshes/right_arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_3"
+    type="revolute">
+    <origin
+      xyz="0.023132 -0.10115 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm2" />
+    <child
+      link="right_arm3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+
+
+	
+  <link
+    name="left_hip1">
+    <inertial>
+      <origin
+        xyz="6.3658E-05 -0.018626 0.0020748"
+        rpy="0 0 0" />
+      <mass
+        value="0.090419" />
+      <inertia
+        ixx="5.3825E-05"
+        ixy="-7.7297E-08"
+        ixz="1.6702E-07"
+        iyy="5.2483E-05"
+        iyz="-1.8234E-07"
+        izz="7.6761E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_hip1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_hip1.STL" />
+      </geometry>
+    </collision>
+  </link>
+	
+  <joint
+    name="left_hip_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.001085 0.0939 -0.013327"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_hip1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="1" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+	
+  <link
+    name="left_hip2">
+    <inertial>
+      <origin
+        xyz="-0.0032835 -0.0078728 -0.0015272"
+        rpy="0 0 0" />
+      <mass
+        value="0.16419" />
+      <inertia
+        ixx="5.2156E-05"
+        ixy="-1.1904E-08"
+        ixz="-1.3136E-07"
+        iyy="2.6121E-05"
+        iyz="2.2088E-08"
+        izz="5.8672E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_hip2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_hip2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hip_roll"
+    type="revolute">
+    <origin
+      xyz="0.0018224 0.0055 -0.024"
+      rpy="0 0 0" />
+    <parent
+      link="left_hip1" />
+    <child
+      link="left_hip2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="left_hip3">
+    <inertial>
+      <origin
+        xyz="-0.0009528 0.0042278 -0.07102"
+        rpy="0 0 0" />
+      <mass
+        value="0.47373" />
+      <inertia
+        ixx="0.00048195"
+        ixy="-3.8127E-06"
+        ixz="1.2787E-05"
+        iyy="0.00038829"
+        iyz="-1.4208E-05"
+        izz="0.00018127" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_hip3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_hip3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hip_yaw"
+    type="revolute">
+    <origin
+      xyz="0 -0.00525 -0.02315"
+      rpy="0 0 0" />
+    <parent
+      link="left_hip2" />
+    <child
+      link="left_hip3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="left_knee">
+    <inertial>
+      <origin
+        xyz="0.0069938 0.0033833 -0.060338"
+        rpy="0 0 0" />
+      <mass
+        value="0.37345" />
+      <inertia
+        ixx="0.00042916"
+        ixy="1.603E-06"
+        ixz="1.6288E-05"
+        iyy="0.00032215"
+        iyz="-4.5821E-06"
+        izz="0.00015892" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_knee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_knee_jo"
+    type="revolute">
+    <origin
+      xyz="-0.0045 -0.00025 -0.128"
+      rpy="0 0 0" />
+    <parent
+      link="left_hip3" />
+    <child
+      link="left_knee" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="left_foot_y">
+    <inertial>
+      <origin
+        xyz="-0.012888 0.0010006 -0.027217"
+        rpy="0 0 0" />
+      <mass
+        value="0.20417" />
+      <inertia
+        ixx="8.6232E-05"
+        ixy="-1.0733E-09"
+        ixz="-1.792E-07"
+        iyy="5.192E-05"
+        iyz="-6.0737E-10"
+        izz="5.7586E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_foot_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_foot_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_foot_y_jo"
+    type="revolute">
+    <origin
+      xyz="0.008 0 -0.118"
+      rpy="0 0 0" />
+    <parent
+      link="left_knee" />
+    <child
+      link="left_foot_y" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="left_foot_x">
+    <inertial>
+      <origin
+        xyz="-0.00424471215086678 8.83615687563566E-08 -0.0258874402362225"
+        rpy="0 0 0" />
+      <mass
+        value="0.179769751979251" />
+      <inertia
+        ixx="0.000162575615631408"
+        ixy="-4.3502822144027E-10"
+        ixz="-1.39480656464972E-08"
+        iyy="0.000294918316791951"
+        iyz="1.98565170719036E-10"
+        izz="0.000424048295428821" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_foot_x.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/left_foot_x.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_foot_x_jo"
+    type="revolute">
+    <origin
+      xyz="0 0.00099941 -0.037"
+      rpy="0 0 0" />
+    <parent
+      link="left_foot_y" />
+    <child
+      link="left_foot_x" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="right_hip1">
+    <inertial>
+      <origin
+        xyz="-6.36577274108069E-05 0.0196260014767908 0.00207479626074852"
+        rpy="0 0 0" />
+      <mass
+        value="0.0904187381715403" />
+      <inertia
+        ixx="5.38246679078187E-05"
+        ixy="-7.72969434280209E-08"
+        ixz="-1.67022310989973E-07"
+        iyy="5.24826042522271E-05"
+        iyz="1.82341790079396E-07"
+        izz="7.67608010482985E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_hip1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_hip1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_hip_pitch"
+    type="revolute">
+    <origin
+      xyz="0.001115 -0.0965 -0.013327"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_hip1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="right_hip2">
+    <inertial>
+      <origin
+        xyz="0.00331113643961317 0.00787277973418271 -0.00152715629104833"
+        rpy="0 0 0" />
+      <mass
+        value="0.164190861193546" />
+      <inertia
+        ixx="5.215641323237E-05"
+        ixy="-1.19039463273149E-08"
+        ixz="1.31358874032874E-07"
+        iyy="2.61205317951127E-05"
+        iyz="-2.208848562922E-08"
+        izz="5.86715753089718E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_hip2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_hip2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_hip_roll"
+    type="revolute">
+    <origin
+      xyz="-0.00185 -0.0045 -0.024"
+      rpy="0 0 0" />
+    <parent
+      link="right_hip1" />
+    <child
+      link="right_hip2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="right_hip3">
+    <inertial>
+      <origin
+        xyz="-0.000952797397745661 0.00422775394663047 -0.0710200720744198"
+        rpy="0 0 0" />
+      <mass
+        value="0.47372999581153" />
+      <inertia
+        ixx="0.000481949796096193"
+        ixy="-3.81271886359838E-06"
+        ixz="1.278669641739E-05"
+        iyy="0.000388294415269902"
+        iyz="-1.42075949096599E-05"
+        izz="0.000181274621011488" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_hip3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_hip3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_hip_yaw"
+    type="revolute">
+    <origin
+      xyz="-2.7594E-05 0.00475 -0.02315"
+      rpy="0 0 0" />
+    <parent
+      link="right_hip2" />
+    <child
+      link="right_hip3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="right_knee">
+    <inertial>
+      <origin
+        xyz="0.00699381071780936 0.00338332520135909 -0.0603381196837382"
+        rpy="0 0 0" />
+      <mass
+        value="0.373447646908613" />
+      <inertia
+        ixx="0.000429162766551639"
+        ixy="1.60301527579783E-06"
+        ixz="1.62879548340809E-05"
+        iyy="0.000322151019554768"
+        iyz="-4.58205901445265E-06"
+        izz="0.000158922625277449" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_knee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_knee_jo"
+    type="revolute">
+    <origin
+      xyz="-0.0045 -0.00025 -0.128"
+      rpy="0 0 0" />
+    <parent
+      link="right_hip3" />
+    <child
+      link="right_knee" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="right_foot_y">
+    <inertial>
+      <origin
+        xyz="-0.012888387546339 0.00100062353508162 -0.027216990307178"
+        rpy="0 0 0" />
+      <mass
+        value="0.204168570722069" />
+      <inertia
+        ixx="8.62320348105702E-05"
+        ixy="-1.07327974268827E-09"
+        ixz="-1.79197419171308E-07"
+        iyy="5.19196934874567E-05"
+        iyz="-6.07410466001495E-10"
+        izz="5.75861568294968E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_foot_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_foot_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_foot_y_jo"
+    type="revolute">
+    <origin
+      xyz="0.008 0 -0.118"
+      rpy="0 0 0" />
+    <parent
+      link="right_knee" />
+    <child
+      link="right_foot_y" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="right_foot_x">
+    <inertial>
+      <origin
+        xyz="-0.00424471215086948 8.83615729752041E-08 -0.0258874402362225"
+        rpy="0 0 0" />
+      <mass
+        value="0.179769751979255" />
+      <inertia
+        ixx="0.000162575615631412"
+        ixy="-4.35028220172925E-10"
+        ixz="-1.39480656458583E-08"
+        iyy="0.000294918316791956"
+        iyz="1.98565170082592E-10"
+        izz="0.000424048295428829" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_foot_x.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://小人形关节整合02/meshes/right_foot_x.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_foot_x_jo"
+    type="revolute">
+    <origin
+      xyz="0 0.001 -0.037"
+      rpy="0 0 0" />
+    <parent
+      link="right_foot_y" />
+    <child
+      link="right_foot_x" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="100"
+      velocity="3" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+
+
+
+</robot>

@@ -1,0 +1,89 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"base_link1" [label="base_link1"];
+"base_link2" [label="base_link2"];
+"head_link1" [label="head_link1"];
+"head_link2" [label="head_link2"];
+"left_arm1" [label="left_arm1"];
+"left_arm2" [label="left_arm2"];
+"left_arm3" [label="left_arm3"];
+"left_arm4" [label="left_arm4"];
+"left_arm5" [label="left_arm5"];
+"left_arm6" [label="left_arm6"];
+"right_arm1" [label="right_arm1"];
+"right_arm2" [label="right_arm2"];
+"right_arm3" [label="right_arm3"];
+"right_arm4" [label="right_arm4"];
+"right_arm5" [label="right_arm5"];
+"right_arm6" [label="right_arm6"];
+"left_hip1" [label="left_hip1"];
+"left_hip2" [label="left_hip2"];
+"left_hip3" [label="left_hip3"];
+"left_knee" [label="left_knee"];
+"left_foot_y" [label="left_foot_y"];
+"left_foot_x" [label="left_foot_x"];
+"right_hip1" [label="right_hip1"];
+"right_hip2" [label="right_hip2"];
+"right_hip3" [label="right_hip3"];
+"right_knee" [label="right_knee"];
+"right_foot_y" [label="right_foot_y"];
+"right_foot_x" [label="right_foot_x"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_link_1" [label="xyz: -0.0043186 -0.027049 0.10865 \nrpy: -1.5708 0 0"]
+"base_link_1" -> "base_link1"
+"base_link1" -> "base_link_2" [label="xyz: 0.00051856 0 0.0541 \nrpy: 3.14159 0 0"]
+"base_link_2" -> "base_link2"
+"base_link2" -> "head_link_1" [label="xyz: 0.004 0.136 0.027049 \nrpy: -1.5708 0.052684 0"]
+"head_link_1" -> "head_link1"
+"head_link1" -> "head_link_2" [label="xyz: 0 0 0.02865 \nrpy: 1.5708 -0 0"]
+"head_link_2" -> "head_link2"
+"base_link2" -> "left_arm_1" [label="xyz: 0.005 0.096001 -0.083068 \nrpy: -3.14159 -0 0"]
+"left_arm_1" -> "left_arm1"
+"left_arm1" -> "left_arm_2" [label="xyz: 0.002 0.01215 0 \nrpy: 1.5708 -0 0"]
+"left_arm_2" -> "left_arm2"
+"left_arm2" -> "left_arm_3" [label="xyz: 0.025 0.1157 0 \nrpy: -1.5708 0 0"]
+"left_arm_3" -> "left_arm3"
+"left_arm3" -> "left_arm_4" [label="xyz: 0 0.00155 0 \nrpy: -3.00972e-15 -1.5339 1.5708"]
+"left_arm_4" -> "left_arm4"
+"left_arm4" -> "left_arm_5" [label="xyz: 0.058959 0.007175 0.0021739 \nrpy: 1.5708 -0 0"]
+"left_arm_5" -> "left_arm5"
+"left_arm5" -> "left_arm_6" [label="xyz: 0.1257 0 0 \nrpy: 0 1.5708 -0.0368539"]
+"left_arm_6" -> "left_arm6"
+"base_link2" -> "right_arm_1" [label="xyz: 0.0044814 0.095801 0.13717 \nrpy: -3.14159 -0 0"]
+"right_arm_1" -> "right_arm1"
+"right_arm1" -> "right_arm_2" [label="xyz: 0.002 -0.00515 0 \nrpy: 1.5708 -0 0"]
+"right_arm_2" -> "right_arm2"
+"right_arm2" -> "right_arm_3" [label="xyz: 0.025001 -0.1007 0 \nrpy: -1.5708 0 0"]
+"right_arm_3" -> "right_arm3"
+"right_arm3" -> "right_arm_4" [label="xyz: 0 -0.0018 0 \nrpy: 1.5708 -0 0"]
+"right_arm_4" -> "right_arm4"
+"right_arm4" -> "right_arm_5" [label="xyz: -0.003175 -0.058999 0 \nrpy: 1.5708 -0 -1.5708"]
+"right_arm_5" -> "right_arm5"
+"right_arm5" -> "right_arm_6" [label="xyz: 0.12561 0.0046316 0 \nrpy: 0 1.5708 -0"]
+"right_arm_6" -> "right_arm6"
+"base_link" -> "left_hip_pitch" [label="xyz: -0.001085 0.0939 -0.013327 \nrpy: 0 -0 0"]
+"left_hip_pitch" -> "left_hip1"
+"left_hip1" -> "left_hip_roll" [label="xyz: 0.0018224 0.0055 -0.024 \nrpy: 0 -0 0"]
+"left_hip_roll" -> "left_hip2"
+"left_hip2" -> "left_hip_yaw" [label="xyz: 0 -0.00525 -0.02315 \nrpy: 0 -0 0"]
+"left_hip_yaw" -> "left_hip3"
+"left_hip3" -> "left_knee_jo" [label="xyz: -0.0045 -0.00025 -0.128 \nrpy: 0 -0 0"]
+"left_knee_jo" -> "left_knee"
+"left_knee" -> "left_foot_y_jo" [label="xyz: 0.008 0 -0.118 \nrpy: 0 -0 0"]
+"left_foot_y_jo" -> "left_foot_y"
+"left_foot_y" -> "left_foot_x_jo" [label="xyz: 0 0.00099941 -0.037 \nrpy: 0 -0 0"]
+"left_foot_x_jo" -> "left_foot_x"
+"base_link" -> "right_hip_pitch" [label="xyz: 0.001115 -0.0965 -0.013327 \nrpy: 0 -0 0"]
+"right_hip_pitch" -> "right_hip1"
+"right_hip1" -> "right_hip_roll" [label="xyz: -0.00185 -0.0045 -0.024 \nrpy: 0 -0 0"]
+"right_hip_roll" -> "right_hip2"
+"right_hip2" -> "right_hip_yaw" [label="xyz: -2.7594e-05 0.00475 -0.02315 \nrpy: 0 -0 0"]
+"right_hip_yaw" -> "right_hip3"
+"right_hip3" -> "right_knee_jo" [label="xyz: -0.0045 -0.00025 -0.128 \nrpy: 0 -0 0"]
+"right_knee_jo" -> "right_knee"
+"right_knee" -> "right_foot_y_jo" [label="xyz: 0.008 0 -0.118 \nrpy: 0 -0 0"]
+"right_foot_y_jo" -> "right_foot_y"
+"right_foot_y" -> "right_foot_x_jo" [label="xyz: 0 0.001 -0.037 \nrpy: 0 -0 0"]
+"right_foot_x_jo" -> "right_foot_x"
+}

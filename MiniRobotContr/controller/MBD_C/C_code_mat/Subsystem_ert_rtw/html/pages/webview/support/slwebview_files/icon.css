@@ -1,0 +1,9 @@
+.SimulinkModelIcon_icon,
+.SubSystemIcon_icon,
+.BlockIcon_icon,
+.LineIcon_icon { background-image: url('icon.png'); width: 16px; height: 16px; }
+
+.SimulinkModelIcon_icon { background-position: -0px; }
+.SubSystemIcon_icon { background-position: -16px; }
+.BlockIcon_icon { background-position: -32px; }
+.LineIcon_icon { background-position: -48px; }

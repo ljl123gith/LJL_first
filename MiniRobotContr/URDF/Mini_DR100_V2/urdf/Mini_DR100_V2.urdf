@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Mini_DR100_V2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0011848 0.00094291 -0.18174"
+        rpy="0 0 0" />
+      <mass
+        value="7.2599" />
+      <inertia
+        ixx="0.007632"
+        ixy="2.4523E-05"
+        ixz="-6.2346E-05"
+        iyy="0.0057192"
+        iyz="-4.7369E-05"
+        izz="0.0060895" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_arm">
+    <inertial>
+      <origin
+        xyz="-0.014511 -0.0035665 -0.0099546"
+        rpy="0 0 0" />
+      <mass
+        value="0.25668" />
+      <inertia
+        ixx="7.6778E-05"
+        ixy="-1.8314E-06"
+        ixz="-5.4997E-07"
+        iyy="0.00018344"
+        iyz="-5.5868E-07"
+        izz="0.00016638" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/left_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/left_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm1"
+    type="revolute">
+    <origin
+      xyz="0.001 0.11012 -2.9443E-05"
+      rpy="-0.00026738 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_arm" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm2">
+    <inertial>
+      <origin
+        xyz="0.022995 0.050949 -0.0061605"
+        rpy="0 0 0" />
+      <mass
+        value="0.26624" />
+      <inertia
+        ixx="0.00019858"
+        ixy="-5.6033E-06"
+        ixz="-9.2526E-07"
+        iyy="0.0001793"
+        iyz="-5.0509E-06"
+        izz="0.00012916" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/left_arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/left_arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm" />
+    <child
+      link="left_arm2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm3">
+    <inertial>
+      <origin
+        xyz="-0.00855 0.091527 -0.015154"
+        rpy="0 0 0" />
+      <mass
+        value="1.0594" />
+      <inertia
+        ixx="0.0006011"
+        ixy="9.4254E-08"
+        ixz="-4.0638E-07"
+        iyy="0.00061017"
+        iyz="1.8223E-05"
+        izz="0.00066353" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/left_arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/left_arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_3"
+    type="revolute">
+    <origin
+      xyz="0.029139 0.11522 0"
+      rpy="0.0087266 0 0" />
+    <parent
+      link="left_arm2" />
+    <child
+      link="left_arm3" />
+    <axis
+      xyz="0 0.0087265 0.99996" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm">
+    <inertial>
+      <origin
+        xyz="-0.014511 0.0035665 0.0099546"
+        rpy="0 0 0" />
+      <mass
+        value="0.25668" />
+      <inertia
+        ixx="7.6778E-05"
+        ixy="1.8314E-06"
+        ixz="5.4997E-07"
+        iyy="0.00018344"
+        iyz="-5.5868E-07"
+        izz="0.00016638" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/right_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/right_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm1"
+    type="revolute">
+    <origin
+      xyz="0.00048144 -0.11012 -0.00017056"
+      rpy="-0.00026738 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_arm" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm2">
+    <inertial>
+      <origin
+        xyz="0.02097 -0.049858 -0.00087757"
+        rpy="0 0 0" />
+      <mass
+        value="0.26457" />
+      <inertia
+        ixx="0.00018935"
+        ixy="5.6033E-06"
+        ixz="9.2526E-07"
+        iyy="0.00017946"
+        iyz="-5.0398E-06"
+        izz="0.0001254" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/right_arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/right_arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_2"
+    type="revolute">
+    <origin
+      xyz="0.002 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm" />
+    <child
+      link="right_arm2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm3">
+    <inertial>
+      <origin
+        xyz="-0.0020693 -0.090701 0.010086"
+        rpy="0 0 0" />
+      <mass
+        value="1.0594" />
+      <inertia
+        ixx="0.0006011"
+        ixy="3.4978E-07"
+        ixz="3.8884E-07"
+        iyy="0.00060662"
+        iyz="-1.6125E-05"
+        izz="0.00066708" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/right_arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mini_DR100_V2/meshes/right_arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_3"
+    type="revolute">
+    <origin
+      xyz="0.023132 -0.10115 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm2" />
+    <child
+      link="right_arm3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <calibration
+      rising="1"
+      falling="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper_limit="3"
+      soft_lower_limit="-3"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+</robot>

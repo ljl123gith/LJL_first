@@ -1,0 +1,29 @@
+{
+ "version":3,
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "sections":[
+  {
+   "hid":1,
+   "sid":"c_code_MR100",
+   "name":"c_code_MR100",
+   "fullname":"c_code_MR100",
+   "label":"c_code_MR100",
+   "parent":0,
+   "descendantIDs":[
+    2,
+    3,
+    4
+   ],
+   "descendantsURL":"support/slwebview_files/c_code_MR100_diagrams_1.json",
+   "sysViewURL":"support/slwebview_files/c_code_MR100_p.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false,
+  "notes":false
+ },
+ "iconsUrl":"support/slwebview_files/icon.css"
+}
